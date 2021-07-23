@@ -1,0 +1,1 @@
+--config configs/audiocaps/train-full-ce-only-audio_sophia_pann_soundnet.json --group_seed 0|1|2 --device 0

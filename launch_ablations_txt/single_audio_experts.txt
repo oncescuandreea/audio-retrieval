@@ -1,0 +1,1 @@
+--config configs/clotho/train-full-ce-only-audio.json --group_seed 0|1|2 --device 0 --resume data/saved/models/audiocaps-train-full-ce-only-audio/2021-03-23_09-06-26/trained_model.pth

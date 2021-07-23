@@ -1,0 +1,1 @@
+--config configs/audiocaps/train-ce-audio-speech.json --group_seed 0|1|2 --device 0

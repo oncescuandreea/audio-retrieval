@@ -1,0 +1,46 @@
+# symlinked data
+data
+
+# ignore predictions
+pred
+
+# local dev files
+scratch/
+
+# nuisance files
+*.DS_Store
+.nfs*
+__pycache__
+
+# generated files
+misc/slurm/scripts/slurm-job.sh
+.vscode/tags
+
+# exclude files that are not for release
+hp*
+hc*
+
+# exclude unsupported datasets
+configs/mit
+configs/mmit
+data_loader/MIT*
+data_loader/MMIT*
+configs/templates
+misc/ablations-template.md
+misc/ablations.md
+misc/README-ablations-template.md
+misc/README-audiocaps-ablations-template.md
+misc/README-model-study.md
+misc/README-queryd-ablations-template.md
+misc/README-template.md
+
+slurm
+
+.vscode
+
+# exclude long video tar lists to avoid an overly heavy git repo
+misc/cvpr2020_challenge/datasets/activity-net/challenge-release-1/video_tar_include.txt
+misc/cvpr2020_challenge/datasets/MSVD/challenge-release-1/video_tar_include.txt
+misc/cvpr2020_challenge/datasets/DiDeMo/challenge-release-1/video_tar_include.txt
+misc/cvpr2020_challenge/datasets/MSRVTT/challenge-release-1/video_tar_include.txt
+misc/cvpr2020_challenge/datasets/YouCook2/challenge-release-1/video_tar_include.txt
