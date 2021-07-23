@@ -145,6 +145,7 @@ python3 train.py --config configs/clotho/train-vggish-vggsound.json --device 0
 
 #### More information can be found at our project page: https://www.robots.ox.ac.uk/~vgg/research/audio-retrieval/
 
+#### This code is based on https://github.com/albanie/collaborative-experts
 
 ### References
 [1] If you find this code useful, please consider citing:
