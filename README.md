@@ -20,19 +20,19 @@ To be able to run the code below, features extracted from various datasets need 
 ln -s <path-where-data-can-be-saved> data
 ```
 
-To download features for each dataset, follow the steps [here](https://github.com/oncescuandreea/audio-retrieval/blob/master/misc/exps-names.md)
+To download features for each dataset, follow the steps [here](misc/exps-names.md)
 
 ### Evaluating a pretrained model on multiple seeds and reproducing results
 To reproduce the results in tables below, multiple models trained with different seeds need to be downloaded and evaluated on the test sets.
 
 The steps needed to reproduce the results are:
-1. Select the experiment to be reproduced which is in the form `<dataset-name>-<config-file-name>`. Tables with experiments names and the corresponding form can be found in [`misc/exps-names.md`](https://github.com/oncescuandreea/audio-retrieval/blob/master/misc/exps-names.md).
+1. Select the experiment to be reproduced which is in the form `<dataset-name>-<config-file-name>`. Tables with experiments names and the corresponding form can be found in [`misc/exps-names.md`](misc/exps-names.md).
 2. Download the features and splits corresponding to the dataset for which the experiment is run. For example, for AudioCaps run:
 ```
 # fetch the pretrained experts for AudioCaps 
 python3 misc/sync_experts.py --dataset AudioCaps
 ```
-Additional examples for the datasets used in this paper can be found in [`misc/exps-names.md`](https://github.com/oncescuandreea/audio-retrieval/blob/master/misc/exps-names.md).
+Additional examples for the datasets used in this paper can be found in [`misc/exps-names.md`](misc/exps-names.md).
 
 3. Running the `eval.py` script.
 
@@ -46,7 +46,7 @@ If the --experiment flag is not provided, the `eval.py` script will download and
 ### Training a new model
 
 Training a new audio-text embedding requires:
-1. The pretrained experts for the dataset used for training, which should be located in `<root>/data/<dataset-name>/symlinked-feats` (this will be done automatically by the [utility script](misc/sync_experts.py), or can be done manually). Examples can be found in [`misc/exps-names.md`](https://github.com/oncescuandreea/audio-retrieval/blob/master/misc/exps-names.md).
+1. The pretrained experts for the dataset used for training, which should be located in `<root>/data/<dataset-name>/symlinked-feats` (this will be done automatically by the [utility script](misc/sync_experts.py), or can be done manually). Examples can be found in [`misc/exps-names.md`](misc/exps-names.md).
 2. A `config.json` file.  You can define your own, or use one of the provided configs in the [configs](configs) directory.
 
 Training is then performed with the following command:
