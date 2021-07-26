@@ -20,7 +20,7 @@ To be able to run the code below, features extracted from various datasets need 
 ln -s <path-where-data-can-be-saved> data
 ```
 
-To download features for each dataset, follow the steps [here](https://github.com/oncescuandreea/audio-experts/blob/audiocaps/misc/exps-names.md)
+To download features for each dataset, follow the steps [here](https://github.com/oncescuandreea/audio-retrieval/blob/master/misc/exps-names.md)
 
 ### Evaluating a pretrained model on multiple seeds and reproducing results
 To reproduce the results in tables below, multiple models trained with different seeds need to be downloaded and evaluated on the test sets.
