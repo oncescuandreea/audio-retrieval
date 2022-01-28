@@ -4,6 +4,10 @@ This repository is the implementation of [Audio Retrieval with Natural Language 
 
 More information can be found at our project page: https://www.robots.ox.ac.uk/~vgg/research/audio-retrieval/
 
+----
+:exclamation: An extension of this work along with the new SoundDescs dataset for audio retrieval can be found [here](https://github.com/akoepke/audio-retrieval-benchmark). :exclamation:
+----
+
 ### Requirements
 
 We used PyTorch 1.7.1., CUDA 10.1, and Python 3.7 to generate results and models. The required libraries for running this code can be found in `requirements/requirements.txt`.
