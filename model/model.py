@@ -663,9 +663,8 @@ class CEModule(nn.Module):
             self.text_GU = nn.ModuleList(gated_text_embds)
         else:
             print("V. simple classifier, should update....")
-            total_dim = 0
-            for mod in self.expert_dims.keys():
-                total_dim += self.expert_dims[mod][1] * self.repeat_temporal[mod]
+            total_dim = np.dot([self.expert_dims[mod][1] for mod in self.expert_dims.keys()], 
+                               [self.repeat_temporal[mod]  for mod in self.expert_dims.keys()])
             print(f"Total dim is {total_dim}")
             self.classifier = nn.Linear(total_dim, self.num_classes)
 
