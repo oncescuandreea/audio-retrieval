@@ -766,11 +766,9 @@ class CEModule(nn.Module):
 
             if self.use_ce in {"pairwise-star", "pairwise-star-specific",
                                "pairwise-star-tensor"}:
-                sum_all = 0
-                sum_ind = 0
-                for mod0 in experts.keys():
-                    sum_all += (experts[mod0] * ind[mod0].float().to(dev).unsqueeze(1))
-                    sum_ind += ind[mod0].float().to(dev).unsqueeze(1)
+                sum_all = np.dot([experts[mod0] for mod0 in experts.keys()], 
+                                 [ind[mod0].float().to(dev).unsqueeze(1)) for mod0 in experts.keys()])
+                sum_ind = np.sum([ind[mod0].float().to(dev).unsqueeze(1)   for mod0 in experts.keys()] )
                 avg_modality = sum_all / sum_ind
 
             for ii, l in enumerate(self.video_GU):
